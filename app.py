@@ -106,11 +106,8 @@ class VGG16(nn.Module):
         out = self.fc2(out)
         return out
 
-# model = VGG16()
-# model.load_state_dict(torch.load("models/VGG16.pth",map_location=torch.device('cpu')))
-# model.eval()
-
-model = torch.jit.load("models/VGG16.pth",map_location=torch.device('cpu'))
+model = VGG16()
+model.load_state_dict(torch.load("models/VGG16.pth",map_location=torch.device('cuda')))
 model.eval()
 
 def transform_image(image_path):
