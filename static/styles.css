@@ -1,0 +1,107 @@
+/* styles.css */
+.navbar {
+    background-color: #f0f0f0; /* Pearl background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Move the navbar items to the far right */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #000000; /* Black text color */
+    font-weight: bold; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase text */
+    padding: 0.5rem 1rem; /* Padding around text */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    border-radius: 4px; /* Rounded corners for navbar links */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff5733; /* Change text color on hover */
+    background-color: #ffffff; /* White background on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.navbar-brand {
+    color: #333333; /* Darker gray color for brand */
+    font-weight: bold; /* Bold font weight */
+    font-size: 1.5rem; /* Larger font size */
+}
+
+.navbar-brand:hover {
+    color: #ff5733; /* Change brand text color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .navbar-nav {
+        margin-left: 0; /* Reset margin for mobile view */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 10px; /* Adjust margin for mobile view */
+    }
+}
+
+/* Styling for h2 element */
+h2 {
+    font-size: 32px; /* Larger font size */
+    color:black; /* Blue color */
+    text-align: left; /* Center alignment */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Bold font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+/* Styling for p element */
+p {
+    font-size: 18px; /* Standard font size */
+    color:black; /* Dark gray color */
+    text-align: left; /* Center alignment */
+    margin-top: 0; /* Reset margin at the top */
+    font-style: italic; /* Italic font style */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+.carousel-inner .carousel-item img {
+    margin: 0 auto;
+}
+
+/* Styling for carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color:white; /* Change the background color */
+  color: black; /* Text color */
+  border-radius: 100%;
+  font-size: 30px; /* Font size */
+  padding: 10px 15px; /* Padding */
+  margin: 0 10px; /* Margin */
+  cursor:move; /* Cursor style */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Styling for the icon */
+.carousel-control-prev-icon{
+  background-image: url("/static/fast-forward1.png"); /* Custom icon */
+  width: 120px; /* Icon width */
+  height: 120px; /* Icon height */
+}
+
+.carousel-control-next-icon{
+    background-image: url("/static/fast-forward2.png"); /* Custom icon */
+    width: 120px; /* Icon width */
+    height: 120px; /* Icon height */  
+} 
+
+/* Hover effect for buttons */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color:white; /* Change background color on hover */
+}

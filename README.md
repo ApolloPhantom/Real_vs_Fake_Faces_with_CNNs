@@ -18,9 +18,9 @@ train and test dataloaders while transforming our images from
 256x256 to 64x64 , with a training batch size of 64. We downsample
 our images to reduce training time.
 
-![](output1.png)
-![](output2.png)
-![](output3.png)
+![](outputs/output1.png)
+![](outputs/output2.png)
+![](outputs/output3.png)
 
 
 ## Training 
@@ -35,46 +35,44 @@ optimizer = optim.Adam(model1.parameters(), lr=0.0001)
 
 O stands for Fake and 1 for Real.
 ### LeNet
+<pre>
+Accuracy on the test set: 72 %
+Classification Report:
+              precision    recall  f1-score   support
 
+           0     0.6951    0.7887    0.7389      1500
+           1     0.7558    0.6540    0.7012      1500
+
+    accuracy                         0.7213      3000
+   macro avg     0.7254    0.7213    0.7201      3000
+weighted avg     0.7254    0.7213    0.7201      3000
+</pre>
+### AlexNet
 <pre>
 Accuracy on the test set: 76 %
 Classification Report:
               precision    recall  f1-score   support
 
-           0     0.7757    0.7353    0.7550      1500
-           1     0.7484    0.7873    0.7674      1500
+           0     0.8029    0.7007    0.7483      1500
+           1     0.7345    0.8280    0.7784      1500
 
-    accuracy                         0.7613      3000
-   macro avg     0.7620    0.7613    0.7612      3000
-weighted avg     0.7620    0.7613    0.7612      3000
-</pre>
-### AlexNet
-<pre>
-Accuracy on the test set: 78 %
-Classification Report:
-              precision    recall  f1-score   support
-
-           0     0.7871    0.7840    0.7856      1500
-           1     0.7849    0.7880    0.7864      1500
-
-    accuracy                         0.7860      3000
-   macro avg     0.7860    0.7860    0.7860      3000
-weighted avg     0.7860    0.7860    0.7860      3000
+    accuracy                         0.7643      3000
+   macro avg     0.7687    0.7643    0.7634      3000
+weighted avg     0.7687    0.7643    0.7634      3000
 </pre>
 ### Inception V1
 <pre>
-Accuracy on the test set: 77 %
+Accuracy on the test set: 75 %
 Classification Report:
               precision    recall  f1-score   support
 
-           0     0.8202    0.6933    0.7514      1500
-           1     0.7344    0.8480    0.7871      1500
+           0     0.7694    0.7140    0.7407      1500
+           1     0.7332    0.7860    0.7587      1500
 
-    accuracy                         0.7707      3000
-   macro avg     0.7773    0.7707    0.7693      3000
-weighted avg     0.7773    0.7707    0.7693      3000
+    accuracy                         0.7500      3000
+   macro avg     0.7513    0.7500    0.7497      3000
+weighted avg     0.7513    0.7500    0.7497      3000
 </pre>
-
 ### VGG16
 <pre>
 Accuracy on the test set: 50 %
@@ -88,47 +86,46 @@ Classification Report:
    macro avg     0.2500    0.5000    0.3333      3000
 weighted avg     0.2500    0.5000    0.3333      3000
 </pre>
-
 ### ResNet50
 <pre>
-Accuracy on the test set: 75 %
+Accuracy on the test set: 74 %
 Classification Report:
               precision    recall  f1-score   support
 
-           0     0.7393    0.7960    0.7666      1500
-           1     0.7791    0.7193    0.7480      1500
+           0     0.7031    0.8367    0.7641      1500
+           1     0.7984    0.6467    0.7145      1500
 
-    accuracy                         0.7577      3000
-   macro avg     0.7592    0.7577    0.7573      3000
-weighted avg     0.7592    0.7577    0.7573      3000
+    accuracy                         0.7417      3000
+   macro avg     0.7507    0.7417    0.7393      3000
+weighted avg     0.7507    0.7417    0.7393      3000
 </pre>
 
 ### AlexNet (with Normalization every Convolution Layer)
 <pre>
-Accuracy on the test set: 72 %
+Accuracy on the test set: 64 %
 Classification Report:
               precision    recall  f1-score   support
 
-           0     0.6569    0.9447    0.7750      1500
-           1     0.9015    0.5067    0.6487      1500
+           0     0.5839    0.9787    0.7314      1500
+           1     0.9342    0.3027    0.4572      1500
 
-    accuracy                         0.7257      3000
-   macro avg     0.7792    0.7257    0.7118      3000
-weighted avg     0.7792    0.7257    0.7118      3000
+    accuracy                         0.6407      3000
+   macro avg     0.7590    0.6407    0.5943      3000
+weighted avg     0.7590    0.6407    0.5943      3000
 </pre>
 
 ### VGG16 (with Normalization every Convolution Layer)
 <pre>
-Accuracy on the test set: 85 %
+Accuracy on the test set: 84 %
 Classification Report:
               precision    recall  f1-score   support
 
-           0     0.8620    0.8493    0.8556      1500
-           1     0.8515    0.8640    0.8577      1500
+           0     0.8455    0.8320    0.8387      1500
+           1     0.8346    0.8480    0.8413      1500
 
-    accuracy                         0.8567      3000
-   macro avg     0.8567    0.8567    0.8567      3000
-weighted avg     0.8567    0.8567    0.8567      3000
+    accuracy                         0.8400      3000
+   macro avg     0.8401    0.8400    0.8400      3000
+weighted avg     0.8401    0.8400    0.8400      3000
 </pre>
 
 ## Conclusion
