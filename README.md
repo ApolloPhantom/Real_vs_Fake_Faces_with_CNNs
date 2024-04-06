@@ -47,6 +47,9 @@ Classification Report:
    macro avg     0.7254    0.7213    0.7201      3000
 weighted avg     0.7254    0.7213    0.7201      3000
 </pre>
+![](static/Plots/LeNet_Plot.png) 
+![](static/Plots/LeNetcm.png)
+![](static/Plots/LeNetGraph.png)
 ### AlexNet
 <pre>
 Accuracy on the test set: 76 %
@@ -60,6 +63,9 @@ Classification Report:
    macro avg     0.7687    0.7643    0.7634      3000
 weighted avg     0.7687    0.7643    0.7634      3000
 </pre>
+![](static/Plots/AlexPlot.png) 
+![](static/Plots/Alexcm.png)
+![](static/Plots/AlexNetGraph.png)
 ### Inception V1
 <pre>
 Accuracy on the test set: 75 %
@@ -73,6 +79,9 @@ Classification Report:
    macro avg     0.7513    0.7500    0.7497      3000
 weighted avg     0.7513    0.7500    0.7497      3000
 </pre>
+![](static/Plots/InceptionPlot.png) 
+![](static/Plots/Inceptioncm.png)
+![](static/Plots/InceptionGraph.png)
 ### VGG16
 <pre>
 Accuracy on the test set: 50 %
@@ -86,6 +95,9 @@ Classification Report:
    macro avg     0.2500    0.5000    0.3333      3000
 weighted avg     0.2500    0.5000    0.3333      3000
 </pre>
+![](static/Plots/VGGplot.png) 
+![](static/Plots/VGGcm.png)
+![](static/Plots/VGG16Graph.png)
 ### ResNet50
 <pre>
 Accuracy on the test set: 74 %
@@ -99,7 +111,9 @@ Classification Report:
    macro avg     0.7507    0.7417    0.7393      3000
 weighted avg     0.7507    0.7417    0.7393      3000
 </pre>
-
+![](static/Plots/Resnetplot.png) 
+![](static/Plots/Resnetcm.png)
+![](static/Plots/ResnetGraph.png)
 ### AlexNet (with Normalization every Convolution Layer)
 <pre>
 Accuracy on the test set: 64 %
@@ -113,7 +127,9 @@ Classification Report:
    macro avg     0.7590    0.6407    0.5943      3000
 weighted avg     0.7590    0.6407    0.5943      3000
 </pre>
-
+![](static/Plots/Alexv2Plot.png) 
+![](static/Plots/Alexv2cm.png)
+![](static/Plots/AlexNetv2Graph.png)
 ### VGG16 (with Normalization every Convolution Layer)
 <pre>
 Accuracy on the test set: 84 %
@@ -127,7 +143,9 @@ Classification Report:
    macro avg     0.8401    0.8400    0.8400      3000
 weighted avg     0.8401    0.8400    0.8400      3000
 </pre>
-
+![](static/Plots/VGG16v2plot.png) 
+![](static/Plots/VGG16v2cm.png)
+![](static/Plots/VGG16v2Graph.png)
 ## Conclusion
 
 We can see that our altered VGG16 provides us the best result 
@@ -139,4 +157,14 @@ massive improvement in generating photorealistic images by AI. This project show
 differentiate between Real and Fake.
 
 
+## Using Flask App
+```console
+$ pip install -r requirements.txt
+$ python app.py
+```
 
+## Using Flask
+<video width="480" height="480" controls>
+  <source src="static/Demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
