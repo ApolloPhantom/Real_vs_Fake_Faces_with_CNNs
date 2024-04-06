@@ -107,7 +107,7 @@ class VGG16(nn.Module):
         return out
 
 model = VGG16()
-model.load_state_dict(torch.load("models/VGG16.pth",map_location=torch.device('cuda')))
+model.load_state_dict(torch.load("models/VGG16.pth",map_location=torch.device('cpu')))
 model.eval()
 
 def transform_image(image_path):
