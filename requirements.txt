@@ -1,3 +1,4 @@
 flask
 torchvision
 torch
+gunicorn
