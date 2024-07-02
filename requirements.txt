@@ -2,3 +2,4 @@ flask
 torchvision
 torch
 gunicorn
+streamlit
