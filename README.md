@@ -157,11 +157,3 @@ massive improvement in generating photorealistic images by AI. This project show
 differentiate between Real and Fake.
 
 
-## Using Flask App
-```console
-$ pip install -r requirements.txt
-$ python app.py
-```
-
-## Using Flask
-<iframe width="560" height="315" src="static/Demo.mp4" frameborder="0" allowfullscreen></iframe>
