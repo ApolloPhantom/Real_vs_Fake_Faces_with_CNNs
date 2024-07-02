@@ -311,7 +311,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 st.title("Image Classification")
-st.write("Upload an image to classify it as REAL or FAKE.")
+st.write("Upload a Face image to classify it as REAL or FAKE.")
 
 uploaded_file = st.file_uploader("Choose an image...", type=['png', 'jpg', 'jpeg'])
 if uploaded_file is not None:
