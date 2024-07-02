@@ -315,11 +315,11 @@ st.write("Upload a Face image to classify it as REAL or FAKE.")
 
 uploaded_file = st.file_uploader("Choose an image...", type=['png', 'jpg', 'jpeg'])
 if uploaded_file is not None:
-    with open(os.path.join("temp", uploaded_file.name), "wb") as f:
+    with open(os.path.join("test", uploaded_file.name), "wb") as f:
         f.write(uploaded_file.getbuffer())
     
     if allowed_file(uploaded_file.name):
-        filepath = os.path.join("temp", uploaded_file.name)
+        filepath = os.path.join("test", uploaded_file.name)
         result = prediction(filepath)
         os.remove(filepath)
         if result == 1:
