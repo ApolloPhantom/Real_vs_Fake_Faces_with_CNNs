@@ -3,3 +3,4 @@ torchvision
 torch
 gunicorn
 streamlit
+onnx-tf

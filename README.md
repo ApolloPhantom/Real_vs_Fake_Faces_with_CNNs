@@ -146,10 +146,59 @@ weighted avg     0.8401    0.8400    0.8400      3000
 ![](static/Plots/VGG16v2plot.png) 
 ![](static/Plots/VGG16v2cm.png)
 ![](static/Plots/VGG16v2Graph.png)
+### Custom CNN Architecture
+<pre>
+class IntermediateCNN(nn.Module):
+    def __init__(self, num_classes):
+        super(IntermediateCNN, self).__init__()
+        self.layer1 = nn.Sequential(
+            nn.Conv2d(3, 32, kernel_size=3, padding=1),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        self.layer2 = nn.Sequential(
+            nn.Conv2d(32, 64, kernel_size=3),
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        self.layer3 = nn.Sequential(
+            nn.Conv2d(64, 128, kernel_size=3),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        self.layer4 = nn.Sequential(
+            nn.Conv2d(128, 256, kernel_size=3),
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2, stride=2)
+        )
+        self.drop_out = nn.Dropout()
+        self.fc1 = nn.Linear(1024, 512)
+        self.fc2 = nn.Linear(512, 256)
+        self.fc3 = nn.Linear(256, num_classes)
+
+    def forward(self, x):
+        out = self.layer1(x)
+        out = self.layer2(out)
+        out = self.layer3(out)
+        out = self.layer4(out)
+        out = out.view(out.size(0), -1)
+        out = self.drop_out(out)
+        out = self.fc1(out)
+        out = self.fc2(out)
+        out = self.fc3(out)
+        return out
+</pre>
+![](Results/Accu_IntermediateCNN.png) 
+![](Results/ConfusionMatrix_IntermediateCNN.png)
+![](Results/Loss_IntermediateCNN.png)
 ## Conclusion
 
 We can see that our altered VGG16 provides us the best result 
-among all the models we used for training. Further improvement can
+among all the predefined CNN model architectures we used for training and testing.The Custom CNN also provided excellent testing results but it simply began to overfit after 10 epochs. Further improvement can
 be done by altering the structure of the best performing CNNs. We can also increase our training and validation images to get even better result.
 
 Identifying Real and Fake faces have become quite challenging due the 
